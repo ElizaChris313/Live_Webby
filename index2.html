@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+</script> 
+<body>
+
+
+
+
+
+
+    <!-- MUSIC PLAYER -->
+    <!-- MUSIC PLAYER -->
+    <!-- MUSIC PLAYER -->
+    <!-- MUSIC PLAYER -->
+    <div class="tunes-container">
+                <div class="player" style="
+                width: 60%;
+                height: 60vh;
+
+                    ">
+                    <div class="player-header">
+                        <div class="box-container">
+                        <div class="small-green-box"></div>
+                        <div class="small-green-box"></div>
+                        <div class="small-green-box"></div>
+                        </div>
+                    </div>
+                    <p style="
+                                margin-top: 1rem;
+                                text-align: center;
+                                ">
+                                Thank you for taking an interest in my Portfolio, unfortunately my webby is currently under maintenance</p>
+                                <h2 style="text-align: center;"> Enjoy the Following Banger*</h2>
+                                <p style="text-align: center; font-size: xx-small;">*at your own risk</p>
+                    <img src="UI/pixel-cl.png" style="height: 30%; margin-top: -20px;"
+                    
+                    alt="pixel art rendering of chris-liz in a green suit">
+                <div class="player-track-meta">
+                    <p>DJ_Kricket's_Hospital.wav</p> <!--!SONG NAME -->
+                    <p><span>chris-liz</span></p>
+                </div>
+                <div class="player-controls">
+                    <button class="player-play-btn" 
+                        role="button" 
+                        aria-label="Play"
+                        data-playing="false">
+                    <div class="player-icon-play">
+                    <img src="/UI/Media001.png" alt="Play Icon">
+                    </div>
+                    <div class="player-icon-pause hidden">
+                    <img src="/UI/Alert008.png" alt="Pause Icon">
+                    </div>
+                </button>
+                    <div class="player-timeline">
+                    <span class="player-time player-time-current">00:00</span>
+                    <div class="player-progress">
+                        <div class="player-progress-filled"></div>
+                    </div>
+                    <span class="player-time player-time-duration">00:00</span>
+                    </div>
+                    <div class="player-volume-container">
+                        <input type="range" id="volume" min="0" max="1" value="1" step="0.01" class="player-volume" />
+                    </div>
+                </div>
+                
+                <audio src="/Sounds/Hospital V2.wav" crossorigin="anonymous" ></audio>
+                </div>
+
+    
+    </div> 
+    <script src="app.js"></script>
+</body>
+</html>
