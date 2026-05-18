@@ -237,7 +237,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A0063 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A0063 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A0063 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -245,7 +245,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A0267 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A0267 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A0267 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -253,7 +253,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A0495 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A0495 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A0495 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -261,7 +261,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9474 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9474 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9474 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -269,7 +269,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9495 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9495 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9495 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -277,7 +277,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9532 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9532 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9532 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -285,7 +285,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9562 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9562 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9562 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -293,7 +293,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9602 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9602 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9602 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -301,7 +301,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9699 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9699 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9699 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
@@ -309,7 +309,7 @@ const galleryData = [
     "category": "💡 Lighting",
     "title": "_B0A9967 Medium.jpeg",
     "venue": "VENUE_HERE",
-    "image": "LX_Photos/_B0A9967 Medium.jpeg",
+    "image": "LX_Photos/SG_B0A9967 Medium.jpeg",
     "alt": "ALT_TEXT_HERE"
   },
   {
