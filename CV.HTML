@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    
+    <!-- Add a container for your experience content -->
+    <div class="cv-container"></div>
+    
+    <div id="footer"></div>
+    
+    <!-- Load jQuery first -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    
+    <!-- Load header/footer -->
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+   <!-- Your experience data script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('experience.json')
+            .then(response => response.json())
+            .then(data => {
+                const experienceContainer = document.querySelector('.cv-container');
+                
+                data.experience.forEach(entry => {
+                    const year = new Date(entry.startDate).getFullYear();
+                    
+                    // Build full credits HTML
+                    let fullCreditsHTML = '';
+                    const fullCredits = entry.fullCredits || {};
+                    
+                    // Design/Technical Credits
+                    const designTechCredits = [
+                        { label: 'Set Design', value: fullCredits.setDesign },
+                        { label: 'Costume Design', value: fullCredits.costumeDesign },
+                        { label: 'Video Design', value: fullCredits.videoDesign },
+                        { label: 'Lighting Design', value: fullCredits.lightingDesign },
+                        { label: 'Sound Design', value: fullCredits.soundDesign }
+                    ].filter(item => item.value && item.value.trim() !== '');
+                    
+                    if (designTechCredits.length > 0) {
+                        fullCreditsHTML += `<div class="cv-credit-category">Design & Technical</div>`;
+                        designTechCredits.forEach(item => {
+                            fullCreditsHTML += `<div class="cv-full-credit"><strong>${item.label}:</strong> ${item.value}</div>`;
+                        });
+                    }
+                    
+                    // Production Team
+                    const productionCredits = [
+                        { label: 'Producer', value: fullCredits.producer },
+                        { label: 'Production Manager', value: fullCredits.productionManager },
+                        { label: 'Technical Director', value: fullCredits.technicalDirector }
+                    ].filter(item => item.value && item.value.trim() !== '');
+                    
+                    if (productionCredits.length > 0) {
+                        fullCreditsHTML += `<div class="cv-credit-category">Production</div>`;
+                        productionCredits.forEach(item => {
+                            fullCreditsHTML += `<div class="cv-full-credit"><strong>${item.label}:</strong> ${item.value}</div>`;
+                        });
+                    }
+                    
+                    // Cast
+                  
+                    
+                    // Additional Credits
+                    const additionalCredits = Object.entries(fullCredits)
+                        .filter(([key, value]) => {
+                            const excludedKeys = ['setDesign', 'costumeDesign', 'videoDesign', 'lightingDesign', 
+                                                  'soundDesign', 'producer', 'productionManager', 'technicalDirector',
+                                                  'starring1', 'starring2', 'starring3', 'starring4', 'starring5', 'starring6'];
+                            return !excludedKeys.includes(key) && value && value.trim() !== '';
+                        });
+                    
+                    if (additionalCredits.length > 0) {
+                        fullCreditsHTML += `<div class="cv-credit-category">Additional Credits</div>`;
+                        additionalCredits.forEach(([key, value]) => {
+                            const formattedKey = key.replace(/([A-Z])/g, ' $1')
+                                                   .replace(/^./, str => str.toUpperCase());
+                            fullCreditsHTML += `<div class="cv-full-credit"><strong>${formattedKey}:</strong> ${value}</div>`;
+                        });
+                    }
+                    
+                      const castMembers = [
+                        fullCredits.starring1,
+                        fullCredits.starring2,
+                        fullCredits.starring3,
+                        fullCredits.starring4,
+                        fullCredits.starring5,
+                        fullCredits.starring6
+                    ].filter(member => member && member.trim() !== '');
+                    
+                    if (castMembers.length > 0) {
+                        fullCreditsHTML += `<div class="cv-credit-category">Cast</div>`;
+                        castMembers.forEach((member, index) => {
+                            fullCreditsHTML += `<div class="cv-full-credit">${member}</div>`;
+                        });
+                    }
+
+                    // Only show button if there are full credits
+                    const hasFullCredits = fullCreditsHTML !== '';
+                    
+                    const creditHTML = `
+                        <div class="cv-prod">${entry.show}</div>
+                        <div class="cv-role">${entry.role}</div>
+                        <div class="cv-company">${entry.producingCompany} 
+                            <year>${year}</year>
+                        </div>
+                        <div class="cv-credit">
+                            ${entry.basicCredits.director ? `
+                            <span>
+                                <div class="cv-verbedby">Directed by
+                                    <name>${entry.basicCredits.director}</name>
+                                </div>
+                            </span>` : ''}
+                            ${entry.basicCredits.writer ? `
+                            <span>
+                                <div class="cv-verbedby">Written by
+                                    <name>${entry.basicCredits.writer}</name>
+                                </div>
+                            </span>` : ''}
+                            
+                            <!-- Hidden full credits section - only show if there are full credits -->
+                            ${hasFullCredits ? `
+                            <div class="cv-full-credits" style="display: none;">
+                                <div class="cv-full-credits-title">More Credits</div>
+                                ${fullCreditsHTML}
+                            </div>
+                            
+                            <button class="cv-full-credits-btn">Click for more credits</button>
+                            ` : ''}
+                        </div>
+                    `;
+                    
+                    experienceContainer.innerHTML += creditHTML;
+                });
+                
+                // Add event listeners for the buttons
+                document.querySelectorAll('.cv-full-credits-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const fullCredits = this.previousElementSibling;
+                        if (fullCredits.style.display === 'none') {
+                            fullCredits.style.display = 'block';
+                            this.textContent = 'Hide more credits';
+                        } else {
+                            fullCredits.style.display = 'none';
+                            this.textContent = 'Click for more Credits';
+                        }
+                    });
+                });
+            })
+            .catch(error => console.error('Error loading experience data:', error));
+    });
+</script>
+</body>
+</html>

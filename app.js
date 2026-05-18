@@ -105,6 +105,158 @@ window.addEventListener("load", () => {
 
                 });
             }, false);
+
+  document.addEventListener('playersAdded', function() {
+    console.log('New players detected, initializing...');
+    // Small delay to ensure DOM is updated
+    setTimeout(() => {
+        initializeNewPlayers();
+    }, 100);
+});
+
+function initializeNewPlayers() {
+    const players = document.querySelectorAll('.player');
+    
+    players.forEach(player => {
+        // Skip if already initialized
+        if (player.hasAttribute('data-audio-initialized')) return;
+        
+        // Mark as initialized
+        player.setAttribute('data-audio-initialized', 'true');
+        
+        const audioElement = player.querySelector('audio');
+        const playButton = player.querySelector(".player-play-btn");
+        const playIcon = playButton.querySelector(".player-icon-play");
+        const pauseIcon = playButton.querySelector(".player-icon-pause");
+        const progress = player.querySelector(".player-progress");
+        const progressFilled = player.querySelector(".player-progress-filled");
+        const playerCurrentTime = player.querySelector(".player-time-current");
+        const playerDuration = player.querySelector(".player-time-duration");
+        const volumeControl = player.querySelector(".player-volume");
+
+        // Skip if missing elements
+        if (!audioElement || !playButton) return;
+
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let track, gainNode;
+
+        try {
+            track = audioCtx.createMediaElementSource(audioElement);
+            gainNode = audioCtx.createGain();
+            track.connect(gainNode).connect(audioCtx.destination);
+        } catch (e) {
+            console.log('Audio context error (may already be connected):', e);
+        }
+
+        // Set times after page load
+        setTimes();
+
+        // Update progress bar and time values as audio plays
+        audioElement.addEventListener("timeupdate", () => {
+            progressUpdate();
+            setTimes();
+        });
+
+        // Play button toggle
+        playButton.addEventListener("click", () => {
+            // Resume AudioContext if needed
+            if (audioCtx.state === "suspended") {
+                audioCtx.resume();
+            }
+
+            // Play or pause the track
+            if (playButton.dataset.playing === "false") {
+                audioElement.play();
+                playButton.dataset.playing = "true";
+                playIcon.classList.add("hidden");
+                pauseIcon.classList.remove("hidden");
+            } else {
+                audioElement.pause();
+                playButton.dataset.playing = "false";
+                pauseIcon.classList.add("hidden");
+                playIcon.classList.remove("hidden");
+            }
+        });
+
+        // Reset the player when the track ends
+        audioElement.addEventListener("ended", () => {
+            playButton.dataset.playing = "false";
+            pauseIcon.classList.add("hidden");
+            playIcon.classList.remove("hidden");
+            progressFilled.style.flexBasis = "0%";
+            audioElement.currentTime = 0;
+            setTimes();
+        });
+
+        // Update the gainNode value based on the volume control
+        if (volumeControl && gainNode) {
+            volumeControl.addEventListener("input", () => {
+                gainNode.gain.value = volumeControl.value;
+            });
+        }
+
+        // Display currentTime and duration properties in real time
+        function setTimes() {
+            if (playerCurrentTime && !isNaN(audioElement.currentTime)) {
+                playerCurrentTime.textContent = formatTime(audioElement.currentTime);
+            }
+            if (playerDuration && !isNaN(audioElement.duration)) {
+                playerDuration.textContent = formatTime(audioElement.duration);
+            }
+        }
+
+        // Format time in mm:ss
+        function formatTime(time) {
+            if (isNaN(time)) return "0:00";
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+            return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        // Update player timeline progress visually
+        function progressUpdate() {
+            if (progressFilled && audioElement.duration) {
+                const percent = (audioElement.currentTime / audioElement.duration) * 100;
+                progressFilled.style.flexBasis = `${percent}%`;
+            }
+        }
+
+        // Scrub player timeline
+        let mousedown = false;
+        
+        function scrub(event) {
+            if (!progress || !audioElement.duration) return;
+            const scrubTime = (event.offsetX / progress.offsetWidth) * audioElement.duration;
+            audioElement.currentTime = scrubTime;
+        }
+        
+        function scrubTouch(event) {
+            if (!progress || !audioElement.duration) return;
+            const touch = event.touches[0];
+            const scrubTime = ((touch.clientX - progress.getBoundingClientRect().left) / progress.offsetWidth) * audioElement.duration;
+            audioElement.currentTime = scrubTime;
+        }
+
+        if (progress) {
+            progress.addEventListener("click", scrub);
+            progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
+            progress.addEventListener("mousedown", () => (mousedown = true));
+            progress.addEventListener("mouseup", () => (mousedown = false));
+            progress.addEventListener("touchstart", () => (mousedown = true));
+            progress.addEventListener("touchmove", (e) => mousedown && scrubTouch(e));
+            progress.addEventListener("touchend", () => (mousedown = false));
+        }
+    });
+}
+
+// Also run on page load for initial players
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initializeNewPlayers, 500);
+});
+
+window.addEventListener('load', function() {
+    setTimeout(initializeNewPlayers, 500);
+});
   
 //fun lil javascript
 //still fun

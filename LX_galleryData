@@ -1,0 +1,313 @@
+const galleryData = [
+     {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "17i00094919 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/17i00094919 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  
+  {
+    "id": 26,
+    "category": "💡 Lighting",
+    "title": "Arcade 1.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Arcade 1.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 26,
+    "category": "💡 Lighting",
+    "title": "Arcade-4.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Arcade-4.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 26,
+    "category": "💡 Lighting",
+    "title": "Arcade.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Arcade.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 24,
+    "category": "💡 Lighting",
+    "title": "Greenhouse2024-photobyDahliaKatz-3554.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Greenhouse2024-photobyDahliaKatz-3554.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+
+  {
+    "id":27,
+    "category": "💡 Lighting",
+    "title": "ICH_2022.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/ICH_2022.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0037 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0037 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0121 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0121 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0129 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0129 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0167 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0167 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0201 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0201 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0220 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0220 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+
+  {
+    "id": 10,
+    "category": "💡 Lighting",
+    "title": "IMG_0247 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/IMG_0247 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-14.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-14.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-201 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-201 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-223.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-223.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-266.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-266.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-27 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-27 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-280.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-280.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-296.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-296.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 20,
+    "category": "💡 Lighting",
+    "title": "Obs-KylieJenner-photobyDahliaKatz-7.jpg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/Obs-KylieJenner-photobyDahliaKatz-7.jpg",
+    "alt": "ALT_TEXT_HERE"
+  },
+
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A0063 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A0063 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A0267 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A0267 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A0495 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A0495 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9474 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9474 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9495 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9495 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9532 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9532 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9562 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9562 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9602 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9602 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9699 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9699 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 15,
+    "category": "💡 Lighting",
+    "title": "_B0A9967 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/_B0A9967 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 13,
+    "category": "💡 Lighting",
+    "title": "a_girl_1 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/a_girl_1 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 13,
+    "category": "💡 Lighting",
+    "title": "a_girl_2 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/a_girl_2 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 13,
+    "category": "💡 Lighting",
+    "title": "a_girl_3 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/a_girl_3 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 13,
+    "category": "💡 Lighting",
+    "title": "a_girl_4 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/a_girl_4 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 13,
+    "category": "💡 Lighting",
+    "title": "a_girl_5 Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/a_girl_5 Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 12,
+    "category": "💡 Lighting",
+    "title": "this_is_not_impact Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/this_is_not_impact Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  },
+  {
+    "id": 12,
+    "category": "💡 Lighting",
+    "title": "this_is_not_tc Medium.jpeg",
+    "venue": "VENUE_HERE",
+    "image": "LX_Photos/this_is_not_tc Medium.jpeg",
+    "alt": "ALT_TEXT_HERE"
+  }
+    
+];

@@ -318,8 +318,7 @@ nav {
     border-top-width: 0;
     border-color: var(--MSFTBlue);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    width: 60%;
-    height:60vh;
+    width: 29%;
     opacity: 1;
     border-radius: 5px;
     border-top-left-radius: 10px;
@@ -656,24 +655,19 @@ nav {
         margin: 1px;
         margin-bottom: 1rem;
         margin-top: 1rem;
-        height: 95vh;
     }
     .player-header {
         display: flex;
         height: 8vh;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow with offset and blur */
         padding: 0;
         margin: -2;
         padding-left: 6px;
-        position: relative; 
-        justify-content: space-between;
-    }
-      .small-green-box{
-        height: 50;
-        width: 59;
-      }
+        position: relative; /* Ensure relative positioning for inner elements */
+        justify-content: space-between; /* Distribute space between text and boxes */
+}
 }
 
 /* EOD OF PLAYER WRAPPER */
@@ -910,33 +904,8 @@ nav {
   margin: 2rem;
 }
 
-@media screen  and (max-width: 768px) {
-    .player{
-        width: 90vw;
-        max-width: 150vw;
-        padding:0;
-        margin: 1px;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        height: 95vh;
-    }
-    .player-header {
-        display: flex;
-        height: 8vh;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-        padding: 0;
-        margin: -2;
-        padding-left: 6px;
-        position: relative; 
-        justify-content: space-between;
-    }
-      .small-green-box{
-        height: 30px;
-        width: 30px;
-      }
-    }
+
+
 /* CV */
 /* CV */
 /* CV */

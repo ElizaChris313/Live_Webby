@@ -1,0 +1,117 @@
+{
+  "sounds": [
+    {
+      "id": 1,
+      "title": "DJ_Kricket's_Hospital.wav",
+      "artist": "chris-liz",
+      "coverArt": "coverArt/UVGP.jpeg",
+      "src": "Sounds/Hospital V2.wav",
+      "category": "Electronic",
+      "year": "2024",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    },
+   
+    {
+      "id": 3,
+      "title": "Pickles Startup Sound",
+      "artist": "UVGP",
+      "coverArt": "coverArt/UVGP.jpeg",
+      "src": "Sounds/Pickle Startup Sound.wav",
+      "category": "Club",
+      "year": "2024",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    },
+    {
+      "id": 4,
+      "title": "HellSpawn",
+      "artist": "UVGP",
+      "coverArt": "coverArt/UVGP.jpeg",
+      "src": "Sounds/Hellspawn.wav",
+      "category": "Club",
+      "year": "2024",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 5,
+      "title": "The Okay, The Alright and the Disgusting",
+      "artist": "Saltbaby",
+      "coverArt": "coverArt/SALTBABY.jpeg",
+      "src": "Sounds/Sexy DuelV2.wav",
+      "category": "Club",
+      "year": "2022",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 6,
+      "title": "The Braid",
+      "artist": "Saltbaby",
+      "coverArt": "coverArt/SALTBABY.jpeg",
+      "src": "Sounds/BRAIDV2.wav",
+      "category": "Club",
+      "year": "2022",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 7,
+      "title": "Yvonne's Theme",
+      "artist": "Blackberries",
+      "coverArt": "coverArt/pixel-cl.png",
+      "src": "Sounds/Yvonne Theme V1.wav",
+      "category": "Club",
+      "year": "2022",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+  
+    ,{
+      "id": 9,
+      "title": "Claren's Theme",
+      "artist": "I Love the Smell of Gasoline",
+      "coverArt": "coverArt/GASOLINE.jpeg",
+      "src": "Sounds/Claren's Song.wav",
+      "category": "Club",
+      "year": "2023",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 10,
+      "title": "Villain Era",
+      "artist": "I Love the Smell of Gasoline",
+      "coverArt": "coverArt/GASOLINE.jpeg",
+      "src": "Sounds/Villain Era Radio Edit.wav",
+      "category": "Club",
+      "year": "2023",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 11,
+      "title": "Home",
+      "artist": "I Love the Smell of Gasoline",
+      "coverArt": "coverArt/GASOLINE.jpeg",
+      "src": "Sounds/Home Radio Edit.wav",
+      "category": "Club",
+      "year": "2023",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 12,
+      "title": "Asthma",
+      "artist": "Personal Sound Art",
+      "coverArt": "coverArt/pixel-cl.png",
+      "src": "Sounds/Asthma 2.m4a",
+      "category": "Club",
+      "year": "2020",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    ,{
+      "id": 13,
+      "title": "Hook Me",
+      "artist": "Hookman",
+      "coverArt": "coverArt/HOOKMAN.jpeg",
+      "src": "Sounds/Hook ME V2.wav",
+      "category": "Club",
+      "year": "2020",
+      "alt": "pixel art rendering of chris-liz in a green suit"
+    }
+    
+    ]
+}
